@@ -70,5 +70,5 @@ UV_THREADPOOL_SIZE=8 strace -f -o ./async/batch.txt node async/batch.js
 
 - `-f`: Follow child processes (important for Node.js which may spawn worker threads)
 - `-o`: Output file for the trace
-- `-e trace=openat,read,close`: Filter trace to only show specific system calls
+- `-e trace=open,openat,read,close`: Filter trace to only show specific system calls
 - `UV_THREADPOOL_SIZE`: Controls the number of threads in Node.js's thread pool
